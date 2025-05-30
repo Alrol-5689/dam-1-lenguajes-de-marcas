@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 4: Tablas_2</title>
+  <link rel="stylesheet" href="styles_tabla_2.css">
+</head>
+
+<body>
+  <h1>Clase 4: Tablas_2</h1>
+  <hr>
+  <table bgcolor="green">
+    <caption><h2>Países del mundo</h2></caption>
+    <tr>
+      <th>País</th>
+      <th>Capital</th>
+      <th>Moneda</th>
+    </tr>
+    <tr>
+      <td>España</td>
+      <td>Madrid</td>
+      <td>Euro</td>
+    </tr>
+    <tr>
+      <td colspan="2">EEUU (Miami)</td>
+      <td>Dollar</td>
+    </tr>
+    <tr style="background-color: aqua;"> <!--Para línea no funciona (así que lo ponemos en cada td)-->
+      <td style="background-color: aqua;">Reino Unido</td>
+      <td style="background-color: aqua;">Londres</td>
+      <td style="background-color: aqua;">Libra</td>
+    </tr>
+    <tr>
+      <td>Francia</td>
+      <td>París</td>
+      <td rowspan="3" style="background-color: rgb(196, 70, 139);">Euro</td>
+    </tr>
+    <tr>
+      <td>Italia</td>
+      <td>Roma</td>
+    </tr>
+    <tr style="background-color: aqua;"> <!--Para línea no funciona-->
+      <td>Alemania</td>
+      <td>Berlín</td>
+    </tr>
+    <tr>
+      <td colspan="2" rowspan="2" bgcolor="white">Albania (Tirana)<br>Bulgaria (Sofia)</td> <!--El bgcolor no funciona cuando los td tiran de css-->
+      <td>Lec</td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(196, 70, 139);">Euro</td> <!--El style sí funciona aún cuando los td tiran de css. Para línea no funciona (tr)-->
+    </tr>
+  </table>
+  <strong style="margin-left: 50px;">Siguiente línea después de la tabla.</strong> 
+</body>
+
+</html>

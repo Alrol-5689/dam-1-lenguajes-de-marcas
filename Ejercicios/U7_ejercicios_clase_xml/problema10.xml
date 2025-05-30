@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro [
+  <!ELEMENT libro (titulo, autor+, editorial)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ELEMENT editorial (#PCDATA)>
+]>
+
+<libro>
+  <titulo>Programación en Java</titulo>
+  <autor>Juan Pérez</autor>
+  <autor>Laura Gómez</autor>
+  <editorial>Alfaomega</editorial>
+</libro>
+
+<!--============================================-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (libro*)>
+  <!ELEMENT libro (titulo, autor+, editorial)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ELEMENT editorial (#PCDATA)>
+]>
+
+<biblioteca>
+  <libro>
+    <titulo>1984</titulo>
+    <autor>George Orwell</autor>
+    <editorial>Secker & Warburg</editorial>
+  </libro>
+  <libro>
+    <titulo>Clean Code</titulo>
+    <autor>Robert C. Martin</autor>
+    <autor>Otro Autor</autor>
+    <editorial>Prentice Hall</editorial>
+  </libro>
+</biblioteca>
+
+<!--============================================-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mascota [
+  <!ELEMENT mascota (nombre, tipo)>
+  <!ATTLIST mascota edad CDATA #REQUIRED>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT tipo (#PCDATA)>
+]>
+
+<mascota edad = "7">
+  <nombre>Rambo</nombre>
+  <tipo>Gato</tipo>
+</mascota>
+
+<!--============================================-->
+
+
+

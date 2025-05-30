@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies>
+  <nombre>UEM</nombre>
+  <web>http://www.uem.org</web>
+  <ciclos>
+    <ciclo id="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2009" />
+    </ciclo>
+    <ciclo id="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2010" />
+    </ciclo>
+    <ciclo id="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <grado>Medio</grado>
+      <decretoTitulo año="2008" />
+    </ciclo>
+  </ciclos>
+</ies>
+
+<!--  1: Nombre del instituto:  -->
+
+/ies/nombre
+
+<!--   2: Siglas por las que se conocen los ciclos formativos:  -->
+
+/ies/ciclos/ciclo/@id
+
+<!--   3: Ciclos formativos de grado medio (obtener elemento ciclio completo):  -->
+
+ /ies/ciclos[ciclo/grado = "Medio"]/ciclo
+
+ /ies/ciclos/ciclo[grado = "Medio"]
+
+
+<!--   4: Nombre de los ciclos formativos anteriores a 2010:   -->
+
+/ies/ciclos/ciclo[decretoTitulo/@año < 2010]/nombre
+
+<!--   4.1: Nombre de los ciclos formativos anteriores a 2010 y posteriores a 2001-->
+
+/ies/ciclos/ciclo[decretoTitulo/@año < 2010 and decretoTitulo/@año > 2001]/nombre
+
+<!--   5: id de los ciclo de grado medio-->
+
+/ies/ciclos/ciclo[grado = "Medio"]/@id
+
+<!--   6: Obtener los nombres de los ciclos de grado superior cuyo año de decreto sea exactamente 2010   -->
+
+/ies/ciclos/ciclo[grado = "Superior" and decretoTitulo[@año = 2010]]/nombre
+
+/ies/ciclos/ciclo[grado = "Superior" and decretoTitulo/@año = 2010]/nombre <!--TAMBIÉN-->
+
+<!--   7: Nombres de los ciclos cuyo id empiece por S-->
+
+/ies/ciclos/ciclo[starts-with(@id, "S")]/nombre
+
+<!--  8. año en el que se decretó el título de los ciclos con nombre "Administración de Sistemas Informáticos en Red"-->
+
+/ies/ciclos/ciclo[nombre = "Administración de Sistemas Informáticos en Red"]/decretoTitulo/@año
+
+<!-- nombre de los ciclos que cuyo titulo se decreto antes de 2010, usando ../  -->
+
+/ies/ciclos/ciclo/decretoTitulo[@año < 2010]/../nombre
+
+/ies/ciclos/ciclo[decretoTitulo/@año < 2010]/nombre <!--  sin usar ../  -->
+
+<!--   primer ciclo  -->
+
+/ies/ciclos/ciclo[1]
+
+<!--   el nombre del primer ciclo cuyo id termine en "R"  -->
+
+/ies/ciclos/ciclo[ends-with(@id, "R")][1] <!--  y abajo con el nombre  -->
+/ies/ciclos/ciclo[ends-with(@id, "R")][1]/nombre
+
+<!--  igual que el anterior pero el último  -->
+
+/ies/ciclos/ciclo[ends-with(@id, "R")][last()]/nombre 
+
+
+
+
+
+
+
+

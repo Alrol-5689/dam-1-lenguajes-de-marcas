@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> 
+    <style>
+      div {
+        border:2px solid black;
+      }
+      #exterior {
+        position: relative;
+        background-color: red;
+        width: 200px;
+        height:200px;
+        margin:20px;
+      }
+      .interior1 {
+        background-color: blue;
+        width: 100px;
+        height:100px;
+        position:absolute;
+        left: 500px;
+        top: 10px;
+        z-index:1;
+        opacity:0.5;
+      }
+      .interior2 {
+        background-color: green;
+        width: 100px;
+        height:100px;
+        position:absolute;
+        left: 25%;
+        top: 25%;
+        z-index:2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="exterior"> <!--Este ancestro a de ser relative, absolute, fixed o sticky para que los hijos se posicionen respecto a él-->
+      <div class="interior1"></div>
+      <div class="interior2"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.table {
+  border: 1px solid black;
+  width: 2000px;
+}
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+th {
+  border: 1px solid black;
+}
+.table tr {
+  width: 2000px;
+}
+.valoracion {
+  height: 50x;
+  text-align: center;
+}
+.img_valoraciones {
+  height: 15px;
+}

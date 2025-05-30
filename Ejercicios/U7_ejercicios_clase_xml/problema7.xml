@@ -1,0 +1,31 @@
+<!-- que esta mal de este ejercicio??? -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE persona [
+  <!ELEMENT persona EMPTY>
+  <!ATTLIST persona nombre CDATA #IMPLIED>
+]>
+
+<persona dni="03141592E" />
+
+<!-- solución:
+El atributo dni no está definido en la DTD -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+  <!ELEMENT persona EMPTY>
+  <!ATTLIST persona nombre CDATA #IMPLIED>
+]>
+
+<!-- posibles soluciones: -->
+
+<persona nombre = 'Javier' />
+
+<persona />
+
+<!-- Ojo, los siguientes no valdrían porque para xml violan el EMPTY por la etiqueta de cierre (podría haber aglo): -->
+
+<persona></persona>
+
+<persona nombre = 'Javier'></persona>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 5:</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 style="text-align: center;">Clase 5: formularios</h1>
+  <form method="post">
+    <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" /></p>
+    <p><label for="apellido">Apellido: </label><input type="text" id="apellido" name="apellido" /></p>
+    <p><label for="password">Password: </label><input type="password" id="password" name="password" /></p>
+    <p><label>Año de nacimiento: <input type="number" name="anioNacimiento" min="1980" max="2009" /></label></p>
+    <p><label>Fecha de matriculación: <input type="date" name="fecha_matricula" min="2024-02-15"
+          max="2025-12-31"></label></p>
+    <p><label>Hora a la que te gusta levantarte: <input type="time" name="hora" min="07:00" max="21:30" /></label></p>
+    <p><label>Nivel de inglés: <input type="range" name="nivel_ingles" min="0" max="10" /></label></p>
+    <p><label for="color">Color favorito: </label><input type="color" id="color" name="color" /></p>
+    <p>
+      Vehículos que has pilotado:
+      <label><input type="checkbox" id="avion" name="vehiculo" value="Avión">Avión</label>
+      <input type="checkbox" id="coche" name="vehiculo" value="Coche"><label for="coche">Coche</label>
+      <input type="checkbox" id="moto" name="vehiculo" value="Moto">Moto
+      <!--Sin LABEL tienes que atinar en el recuadro-->
+      <input type="checkbox" id="bici" name="vehiculo" value="Bici">Bici
+    </p>
+    <p>
+      Indica el sexo:
+      <input type="radio" id="hombre" name="sexo" value="Hombre"><label for="hombre">Hombre</label>
+      <!--Dos formas de hacer lo mismo-->
+      <label><input type="radio" name="sexo" value="Mujer">Mujer</label> <!--Pero aquí no hace falta el id-->
+    </p>
+    <p>
+      <label>Indica el número de hijos:
+        <select name="hijos">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label>Ciudad de nacimiento:
+        <select name="ciudad_nacimiento">
+          <option value="Madrid">Madrid</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Tarragona">Tarragona</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label for="ciudad_residencia">Ciudad de residencia (agrupadas por Comunidad Autónoma): </label>
+      <select id="ciudad_residencia" name="ciudad_residencia">
+        <optgroup label="Comunidad Valenciana">
+          <option value="Alicante">Alicante</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Castellón">Castellón</option>
+        </optgroup>
+        <optgroup label="Castilla la Mancha" disabled>
+          <option value="Guadalajara">Guadalajara</option>
+          <option value="Toledo">Toledo</option>
+          <option value="Ciudad Real">Ciudad Real</option>
+        </optgroup>
+        <optgroup label="Comunidad de Madrid">
+          <option value="Madrid">Madrid</option>
+        </optgroup>
+        <optgroup label="Cataluña">
+          <option value="Tarragona">Tarragona</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Gerona">Gerona</option>
+          <option value="Lleida">Lleida</option>
+        </optgroup>
+      </select>
+    </p>
+    <p><label for="txt">Descripción (opcional):</label></p>
+    <p><textarea style="resize: none;" name="txt" id="txt" rows="4" cols="70">Escribe lo que quieras: </textarea></p>
+    <p>
+      <button type="submit"><strong>Enviar formulario</strong></button> <!--opción moderna. Permite estilos... -->
+      <input type="submit" value="Enviar formulario"> <!--opción sencilla. No permite estilos... -->
+      <button type="reset">Borrar</button> <!--reset = borrar-->
+    </p>
+    <p>
+      <!--Los tipo button no hacen nada. Más bien el lenguaje de programación de detrás delimitan lo que hacen-->
+      <button type="button"><b>Este botón no hace nada.</b></button>
+      <input type="button" value="Este botón no hace nada. (input: sin style)">
+    </p>
+  </form>
+</body>
+
+</html>

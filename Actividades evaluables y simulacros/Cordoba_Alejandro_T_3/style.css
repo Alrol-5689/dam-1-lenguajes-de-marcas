@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c9b0b0;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: fixed;     /* Hace que el header se quede fijo */
+    top: 0;              /* Lo pega arriba del todo */
+    width: 100%;         /* Que ocupe todo el ancho de la ventana */
+    z-index: 1000; 
+}
+header h1{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: #444;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 1em;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #666;
+}
+main {
+    margin-top: 130px;
+    flex: 1;
+    padding: 2em;
+} 
+main h2 {
+    color: #685656;
+}
+
+.libro {
+    display: flex; /* Imagen a la izquierda, contenido a la derecha */
+    background-color: rgb(197, 193, 193);
+    padding: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    border: 1px solid #070707;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 500px;
+}
+.libro img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover; /* Asegura que la imagen mantenga proporción sin deformarse */
+    margin-right: 1em;
+    border: 2px solid #ccc;
+}
+.contenido {
+    flex: 1; /* Toma todo el ancho disponible del lado derecho */
+    display: flex;
+    flex-direction: column; /*Apila el contenido en vertical*/
+}
+.titulo h3 {
+    margin: 0; /* Elimina espacio por defecto */
+    padding-bottom: 0em;
+    
+}
+.autor  {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #333; /* o el color que tú quieras */
+    font-style: italic; /* Texto en cursiva */
+}
+.autor p {
+    margin: 0;
+}
+.descripcion  {
+    margin-top: 0.4em;
+    color: #4d4c4c;
+    font-style: italic;
+}
+.descripcion {
+    max-height: 120px;         /* altura máxima visible */
+    overflow-y: auto;          /* añade scroll si se pasa de la altura */
+    padding-right: 0.5em;      /* espacio para que el scroll no tape el texto */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* Internet Explorer y Edge */
+}  
+.descripcion::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari y Opera */
+}
+.anio  {
+    border-top: 2px solid #070707;
+    margin-top: auto; /* usa todo el espacio que haya encima de ti */
+    color: #4d4c4c;
+    font-style: italic;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    margin-top: 20em;
+}  

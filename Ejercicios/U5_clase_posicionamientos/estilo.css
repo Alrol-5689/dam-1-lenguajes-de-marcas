@@ -1,0 +1,12 @@
+*  { font-family: arial; margin: 0 }
+h1 { text-align: center; }
+body > p  { text-align: justify; margin: 0 40px; }
+#principal { width: 800px; height: 800px; background-color: silver; margin:auto; }
+div p  { padding: 5px }
+#caja1  { width: 180px; height: 150px; background-color: red; margin: 25px; float: left; }
+#caja2  { width: 180px; height: 250px; background-color: aqua; margin: 25px; float: right; }
+#caja3  { width: 600px; height: 100px; background-color: lime; margin: 25px;  }
+#caja4  { width: 650px; height: 100px; background-color: lime; margin: 25px; clear: left; }
+#caja5  { width: 300px; height: 150px; background-color: pink; margin: 25px; float: right; }
+#caja6  { width: 180px; height: 100px; background-color: green; margin: 25px; float: left; }
+#caja7  { width: 700px; height: 100px; background-color: lime; margin: 25px; clear: both }

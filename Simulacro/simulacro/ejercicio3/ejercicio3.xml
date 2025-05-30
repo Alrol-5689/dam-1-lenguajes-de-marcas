@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies>
+  <nombre>UEM</nombre>
+  <web>http://www.uem.org</web>
+  <ciclos>
+    <ciclo id="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2009" />
+    </ciclo>
+    <ciclo id="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2010" />
+    </ciclo>
+    <ciclo id="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <grado>Medio</grado>
+      <decretoTitulo año="2008" />
+    </ciclo>
+  </ciclos>
+</ies>
+
+<!--  
+
+1: Nombre del instituto: 
+ /ies/nombre
+
+2: Siglas por las que se conocen los ciclos formativos:  
+ /ies/ciclos/ciclo/@id
+
+3: Ciclos formativos de grado medio (obtener elemento ciclio completo):  
+ //grado[Medio]/.. MAL
+ //ciclo[grado="Medio"] BIEN
+
+4: Nombre de los ciclos formativos anteriores a 2010: 
+ //nombre[decretoTitulo<2010] MAL
+ //ciclo[decretoTitulo/@año < 2010]/nombre
+
+-->
+
+

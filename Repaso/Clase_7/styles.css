@@ -1,0 +1,45 @@
+h1 {
+  font-size: 50px;
+  color: rgb(9, 109, 109);
+  background-image: url('img/fondo.png');
+  text-align: right;
+  width: 500px;
+  margin-left: 150px;
+  
+}
+body {
+  background-image: url('img/fondonegro.avif'), url('img/triangulos.jpg'), url('img/fondoazul.webp');
+  background-position: left, right center;
+  background-repeat: repeat-y, repeat-x, no-repeat;
+  background-attachment: scroll, fixed, fixed;
+  background-size: 200px, 50px, 100%;
+
+}
+p {
+  margin: auto;
+  text-align: center;
+}
+#id {
+  color: brown;
+  font-size: 30px;
+  font-style: italic;
+}
+.class {
+  color: blue;
+  font-size: 30px;
+  background-image: url('img/fondo3.jpg');
+  border: 5px solid;
+  border-color: black;
+  width: 700px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  z-index: 10;
+}

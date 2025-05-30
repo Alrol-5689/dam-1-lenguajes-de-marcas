@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo DOM</title>
+  <script>
+    let seleccionado = null;
+    function toggleRadio(radio) {
+      if (seleccionado === radio) {
+        radio.checked = false;
+        seleccionado = null;
+      } else {
+        seleccionado = radio;
+      }
+    }
+    function mostrarGenero() {
+      // Accedemos a los campos radio usando document.miFormulario2.genero
+      var opciones = document.miFormulario2.genero;
+      var seleccionado = "";
+      for (var i = 0; i < opciones.length; i++) {
+        if (opciones[i].checked) {
+          seleccionado = opciones[i].value;
+          break;
+        }
+      }
+      if (seleccionado) {
+        alert("Has seleccionado: " + seleccionado);
+      } else {
+        alert("No has seleccionado ningún género.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="miFormulario2">
+    <p>Selecciona tu género:</p>
+    <input type="radio" name="genero" value="Masculino" onclick="toggleRadio(this)" /> Masculino<br />
+    <input type="radio" name="genero" value="Femenino" onclick="toggleRadio(this)" /> Femenino<br />
+    <button type="button" onclick="mostrarGenero()">Mostrar Género</button>
+  </form>
+</body>
+
+</html>

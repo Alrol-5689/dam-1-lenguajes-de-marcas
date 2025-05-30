@@ -1,0 +1,66 @@
+h1 {
+  text-align: center;
+}
+
+hr {
+  margin: 50px;
+  height: 10px;
+  border: 4px solid rgb(158, 153, 149);
+  background-color: rgb(35, 65, 5);
+}
+
+/* table {
+  margin-left: 50px;
+  border: 1px solid black;
+} */
+
+table.semana-par {
+  /* td {
+    border: 2px solid rgb(58, 25, 207);
+  } */
+  background-color: blanchedalmond;
+  margin-left: 50px;
+  border: 4px solid black;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+}
+
+table.semana-impar {
+  margin-left: 50px;
+  border: 4px solid black;
+  border-collapse: collapse;
+  border-spacing: 10px 20px;
+}
+
+table.semana-par td {
+  text-align: center;
+  padding-left: 5px;
+  /* border: 4px solid rgb(58, 25, 207); */
+  z-index: 1;
+}
+
+
+
+
+/* tr { esto afectaría a las filas
+  border: 4px solid yellowgreen;
+} */
+table.semana-impar th {
+  border: 1px solid black;
+  width: 150px;
+  background-color: chartreuse;
+  z-index: 2;
+}
+
+th {
+  border: 1px solid black;
+  width: 150px;
+  background-color: chartreuse;
+}
+
+table.semana-impar td {
+  background-color: rgb(163, 161, 158);
+  text-align: center;
+  border: 2px solid red;
+  z-index: 1;
+}

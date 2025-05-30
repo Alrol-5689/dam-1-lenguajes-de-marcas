@@ -1,0 +1,26 @@
+<!DOCTYPE ejemplo []>
+
+<!ELEMENT ejemplo (a,b)> <!--en ese orden-->
+<ejemplo><a /><b /></ejemplo>
+
+<!ELEMENT ejemplo (a|b)>
+<ejemplo><b /></ejemplo>
+<ejemplo><a /></ejemplo>
+
+<!ELEMENT ejemplo (a*,b)> <!--cero, una o muchas veces-->
+<ejemplo><a /><b /></ejemplo>
+<ejemplo><a /><a /><a /><a /><b /></ejemplo>
+
+<!ELEMENT ejemplo (a+,b)> <!--una o muchas veces-->
+<ejemplo><b /></ejemplo>
+<ejemplo><a /><b /></ejemplo>
+<ejemplo><a /><a /><a /><a /><b /></ejemplo>
+
+<!ELEMENT ejemplo (a,b?)> <!--puede aparecer o no-->
+<ejemplo><a /><b /></ejemplo>
+<ejemplo><a /></ejemplo>
+
+<!ELEMENT ejemplo (a,(a|b))>
+<ejemplo><a /><b /></ejemplo>
+<ejemplo><a /><a /></ejemplo>
+

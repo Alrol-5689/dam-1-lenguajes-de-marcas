@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies>
+  <nombre>Universidad Europea</nombre>
+  <web>http://www.universidadeuropea.es</web>
+  <ciclos>
+    <ciclo id="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2019" />
+    </ciclo>
+    <ciclo id="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2024" />
+    </ciclo>
+    <ciclo id="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <grado>Medio</grado>
+      <decretoTitulo año="2021" />
+    </ciclo>
+  </ciclos>
+</ies>
+
+<!--  1: Página web del instituto  -->
+
+/ies/web
+
+<!--  2: Siglas por las que se conocen los Ciclos Formativos  -->
+
+/ies/ciclos/ciclo/@id
+
+<!--  3.	Nombre de los Ciclos Formativos de 2021 o 2024  -->
+
+/ies/ciclos/ciclo[decretoTitulo/@año = 2021 or decretoTitulo/@año = 2024]/nombre
+
+<!--  4.	Nombre de los Ciclos Formativos de Grado Superior  -->
+
+/ies/ciclos/ciclo[grado = "Superior"]/nombre

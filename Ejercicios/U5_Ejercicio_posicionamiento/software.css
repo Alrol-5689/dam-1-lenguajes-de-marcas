@@ -1,0 +1,49 @@
+/* Fondo general de la página */
+body {
+  background-color: hsl(235, 20%, 90%);
+  font-family: Arial, sans-serif;
+  margin: 2em;
+}
+
+/* Título principal */
+h1 {
+  color: hsl(235, 20%, 25%);
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+/* Subtítulo de la sección */
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+
+/* Nombres de software */
+h3 {
+  color: white;
+  border-top-right-radius: 15%;
+  border-top-left-radius: 15%;
+  font-size: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  background-color: hsl(125, 60%, 40%);
+}
+
+/* Descripciones */
+p {
+  margin-left: 1em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* Artículos con margen y bordes redondeados */
+article {
+  width: 600px;
+  margin: center;
+  padding: 0em;
+  background-color: white;
+  border-radius: 15px; /* <<< Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para mejorar el contraste */
+}
